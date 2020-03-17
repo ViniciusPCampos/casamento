@@ -3,30 +3,64 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header role="banner" id="qbootstrap-header">
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <a
+            href="#"
+            class="js-qbootstrap-nav-toggle qbootstrap-nav-toggle"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <i></i>
+          </a>
+          <a class="navbar-brand" href="index.html">
+            Vinícius & Raquel
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="#" data-nav-section="home">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-nav-section="groom-bride">
+                <span>Noivo &amp; Noiva</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-nav-section="story">
+                <span>Nossa História</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-nav-section="greetings">
+                <span>Greetings</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-nav-section="when-where">
+                <span>When &amp; Where</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-nav-section="rsvp">
+                <span>RSVP</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-nav-section="gallery">
+                <span>Gallery</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   </header>
 )

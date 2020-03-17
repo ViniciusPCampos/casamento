@@ -26,20 +26,49 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+
+      <main>{children}</main>
+      <footer id="footer" role="contentinfo">
+        <div className="container">
+          <div className="row row-bottom-padded-sm">
+            <div className="col-md-12">
+              <p className="copyright text-center">
+                &copy; 2017 <a href="index.html">Wedding</a>. All Rights
+                Reserved. Images by{" "}
+                <a href="http://unsplash.com/" target="_blank">
+                  Unsplash
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <ul className="social social-circle">
+                <li>
+                  <a href="#">
+                    <i className="icon-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="icon-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="icon-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="icon-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   )
 }
